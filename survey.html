@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ゲームに関するアンケート</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="javascript.js"></script>
+</head>
+<body>
+    <!-- Menu -->
+        <div id="mySidenav" class="sidenav">
+            <a href="" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="index.html" class="button">ホームページ</a>
+            <a href="now.html" class="button">学校以外</a>
+            <a href="Shumi.html" class="button">趣味</a>
+            <a href="survey.html" class="button">ゲームに関するアンケート</a>
+          </div>
+          <button onclick="openNav()" style="font-size:30px;cursor:pointer" tabindex="1" accesskey="A">&#9776;MENU</button>
+
+    <!-- アンケートの内容 -->
+    <h1>ゲームのアンケート</h1>
+    <p class="p2">以下の質問に回答してください。</p>
+    <form action="https://starfish.umb.teikyo-u.ac.jp/joho/post.php" method="post" name="form1">
+        
+        <!-- 名前 -->
+        <label for="nameinput">名前：</label><br>
+        <input type="text" id="nameinput" name="fullname" value="" required><br>
+
+        <!-- 誕生日 -->
+        <label for="birthday">誕生日:</label><br>
+        <input type="date" id="birthday" name="birthday"><br>
+
+        <!-- 性別 -->
+        性別を選んでください<br>
+        <div>
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">男</label><br>
+            <input type="radio" id="female" name="gender" value="female"><label for="female">女</label><br>
+            <input type="radio" id="other" name="gender" value="other" checked>
+            <label for="other">その他</label><br>
+        </div>
+
+        <!-- ゲームをやる方法 -->
+        <p class="p2">どうやってゲームをしていますか？</p>
+        <select name="game_machine" id="game" tabindex="1">
+        <option value="Console">コンソール</option>
+        <option value="PC">パソコン</option>
+        <option value="SmartPhone">スマホ</option>
+        <option value="no" selected>その他</option>
+        </select><br>
+        その他を選んだ場合は下に書いてください。<br>
+        <textarea name="comment" id="comment" accesskey="a" tabindex="1">ここに入力してください</textarea><br>
+
+        <!-- 課金 -->
+        <p class="p2">ゲームに課金したことがありますか？</p>
+        <div>
+          <input type="radio" id="chargesYes" value="chargesYes" name="charges"><label for="chargesYes"> ある </label>
+          <input type="radio" id="chargesNo" value="chargesNo" name="charges" checked><label for="chargesNo"> ない </label>
+        </div><br>
+
+        <!-- ボタン -->
+        <input type="submit" value="送信する">
+        <input type="reset" value="リセットする">
+    </form>
+</body>
+</html>
